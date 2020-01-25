@@ -2,13 +2,19 @@ const particles = [];
 
 // Setup runs once when file is loaded
 function setup() {
-  createCanvas(window.innerWidth, window.innerHeight);
+  var canvas = createCanvas(window.innerWidth, window.innerHeight);
+
+  canvas.parent('sketch-holder');
 
   const particlesLength = Math.floor(window.innerWidth / 10);
 
   for (let i = 0; i < particlesLength; i++) {
     particles.push(new Particle());
   }
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 // Draw runs continuously to create animations
