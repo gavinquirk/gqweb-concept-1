@@ -1,6 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans&display=swap');
+
+:root {
+  --font-heading: 'Lato', sans-serif;
+  --font-primary: 'Open Sans', sans-serif;
+}
+
+/* Global Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: bolder;
+}
+
 html,
 body {
   height: 100%;
+  font-family: var(--font-primary);
 }
 
 body {
@@ -11,6 +30,36 @@ body {
   display: flex;
 }
 
+/* Navigation */
+.navigation {
+  background-color: rgb(244, 247, 248);
+  height: 100%;
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-items {
+  list-style: none;
+}
+
+.nav-item {
+  padding: 2px 5px;
+  margin: 10px 0px;
+}
+
+.nav-link {
+  font-size: 50px;
+  font-family: var(--font-heading);
+  font-weight: bolder;
+  text-decoration: none;
+  color: black;
+}
+
+/* Sketch Holder */
 #sketch-holder {
   width: 50%;
   overflow: hidden;
@@ -23,15 +72,4 @@ body {
   width: 400px;
 
   position: absolute;
-}
-
-.navigation {
-  background-color: rgb(244, 247, 248);
-  height: 100%;
-  width: 50%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
